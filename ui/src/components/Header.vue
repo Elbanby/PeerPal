@@ -1,5 +1,5 @@
 <template>
-  <div class="nav_container">
+  <div class="navbar">
     <div v-for="naveItem in naveItems" class="nav-item"><a :href="naveItem.link">{{naveItem.title}}</a></div>
   </div>
 </template>

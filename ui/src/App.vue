@@ -12,7 +12,15 @@ export default {
       appName: 'PeerPal'
     }
   },
-  components: {}
+  mounted() {
+    var peer = new Peer({key: 'lwjd5qra8257b9'});
+    
+    console.log(peer);
+    peer.on('open', function(id) {
+      console.log('My peer ID is: ' + id);
+    });
+
+  }
 }
 </script>
 

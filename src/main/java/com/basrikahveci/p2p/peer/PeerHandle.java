@@ -1,5 +1,6 @@
 package com.basrikahveci.p2p.peer;
 
+import com.basrikahveci.p2p.Ledger;
 import com.basrikahveci.p2p.peer.network.PeerChannelHandler;
 import com.basrikahveci.p2p.peer.network.PeerChannelInitializer;
 import com.basrikahveci.p2p.peer.service.ConnectionService;
@@ -113,8 +114,10 @@ public class PeerHandle {
     }
 
     public CompletableFuture<Collection<String>> ping() {
+    	
         final CompletableFuture<Collection<String>> future = new CompletableFuture<>();
         peerEventLoopGroup.execute(() -> peer.ping(future));
+        Ledger.printMap();
         return future;
     }
 

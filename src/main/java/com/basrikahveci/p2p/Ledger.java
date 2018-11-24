@@ -23,4 +23,9 @@ public class Ledger {
 		seedMap.put(id,value);
 	}
 	
+	public static void printMap(){
+		System.out.println("The withdraw map is: " + withdrawMap.values());
+		System.out.println("The withdraw map is: " + seedMap.values());
+	}
+	
 }

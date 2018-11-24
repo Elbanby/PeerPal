@@ -1,26 +1,18 @@
 <template>
   <div id="app">
-    <h1>{{appName}}</h1>
-    <nav-header :naveItems="menuItems"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import NavHeader from './components/Header.vue'
-
 export default {
   name: 'app',
   data() {
     return {
-      appName: 'PeerPal',
-      menuItems: [
-        {title:'About us', link: '#aboutus', key:'aboutus'},
-        {title: 'How it works', link: '#howitworks', key:'howitworks'},
-        {title: 'Customer service', link: '#customerservice', key:'customerservice'}
-      ]
+      appName: 'PeerPal'
     }
   },
-  components: {NavHeader}
+  components: {}
 }
 </script>
 

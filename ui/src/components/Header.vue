@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div v-for="naveItem in naveItems" class="nav-item"><a :href="naveItem.link">{{naveItem.title}}</a></div>
+    <div v-for="naveItem in naveItems" class="nav-item" :key="naveItem.key"><a :href="naveItem.link">{{naveItem.title}}</a></div>
   </div>
 </template>
 

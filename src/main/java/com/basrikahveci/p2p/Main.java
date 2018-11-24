@@ -1,5 +1,6 @@
 package com.basrikahveci.p2p;
 
+import com.basrikahveci.p2p.Ledger;
 import com.basrikahveci.p2p.peer.Config;
 import com.google.common.base.Charsets;
 import joptsimple.OptionParser;
@@ -137,6 +138,12 @@ public class Main {
         final Config config = new Config();
         config.setPeerName(peerName);
         config.setWithdrawFlag(withdrawFlag);
+        
+        if(withdrawFlag == 0)
+        	Ledger.addWithdrawNode(peerName, peerName);
+        else
+        	Ledger.addSeedNode(peerName, peerName);
+        
         withdrawFlag = 1 - withdrawFlag; // alternate withdraw flags every time a peer is created
         populateConfig(options, config);
 

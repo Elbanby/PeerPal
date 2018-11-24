@@ -1,7 +1,11 @@
 <template>
   <div>
     <nav-header :naveItems="menuItems" />
-    <slot name="page-content"></slot>
+    <slot name="page-content">
+      <div class="jumbotron jumbotron-fluid">
+        <h1 class="text-center">Testing Jumbotron</h1>
+      </div>
+    </slot>
     <page-footer/>
   </div>
 </template>

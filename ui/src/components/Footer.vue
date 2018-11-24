@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer> Footer is here </footer>
+    <footer class="text-center">&copy; Omar Elbanby, Anthony Wong, Mark Philips - HackWestern 5</footer>
   </div>
 </template>
 

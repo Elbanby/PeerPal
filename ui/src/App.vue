@@ -14,9 +14,9 @@ export default {
     return {
       appName: 'PeerPal',
       menuItems: [
-        {title:'About us', link: '#aboutus'},
-        {title: 'How it works', link: '#howitworks'},
-        {title: 'Customer service', link: '#customerservice'}
+        {title:'About us', link: '#aboutus', key:'aboutus'},
+        {title: 'How it works', link: '#howitworks', key:'howitworks'},
+        {title: 'Customer service', link: '#customerservice', key:'customerservice'}
       ]
     }
   },

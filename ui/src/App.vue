@@ -1,18 +1,30 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <!-- <div v-if="renderStrap">
+
+    </div> -->
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
   name: 'app',
   data() {
     return {
-      appName: 'PeerPal'
+      appName: 'PeerPal',
+      //renderStrap: false
     }
   },
-  components: {}
+  components: {},
+  mounted() {
+    Vue.use(BootstrapVue)
+  }
 }
 </script>
 

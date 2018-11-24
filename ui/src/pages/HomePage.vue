@@ -1,7 +1,9 @@
 <template>
   <div>
     <simple-page>
-      <h1 slot="page-content">TEST</h1>
+      <div>
+        <h1>Hello World</h1>
+      </div>
     </simple-page>
   </div>
 </template>

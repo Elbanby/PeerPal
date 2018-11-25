@@ -5,7 +5,7 @@
         <div class="jumbotron jumbotron-fluid">
         <h1 class="display-3 text-center">Greetings Ya Plebian!</h1>
         </div>
-        <h4 class="text-center">Your Account Information: </h4>
+        <h4 class="text-center">General Account Information: </h4>
         <div class="row">
           <div class="col-md-4"/>
           <table class="table table-borderless col-md-5">

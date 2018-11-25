@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer class="text-center">&copy; Omar Elbanby, Anthony Wong, Mark Philips - HackWestern 5</footer>
+    <footer class="text-center">&copy; Omar Elbanby, Anthony Wong, Mark Philips, Devon Fazekas - HackWestern 5</footer>
   </div>
 </template>
 

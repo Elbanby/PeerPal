@@ -4,7 +4,7 @@
     <h1 class="display-3 text-center">PeerPal Login</h1>
     <p class="lead text-center">Welcome to PeerPal! Please login below</p>
   </div>
-  <div class="row text-center">
+  <div class="row text-center" v-if="errors">
     <div class="col-md-4"/>
     <div class="text-danger col-md-4">Testing Error Log</div>
     <div class="col-md-4"/>
@@ -12,20 +12,30 @@
   <div class="row">
     <div class="col-md-4"/>
     <form class="form-group col-md-4" v-on:submit.prevent="onSubmit">
-      <input class="form-control mb-2 mr-sm-2" type="txt" id="userName" name="userName" placeholder="Username" v-model="userName"/>
-      <input class="form-control mb-2 mr-sm-2" type="password" id="password" name="password" placeholder="Password" v-model="password"/>
       <div class="row">
-        <div class="col-md-4"/>
-        <button class="btn btn-primary mb-2 col-md-4" type="submit" name="submitBtn" value="submit">Login</button>
-        <div class="col-md-4"/>
+        <div class="col-md-3"/>
+        <input class="form-control col-md-6 mb-2 mr-sm-2" type="txt" id="userName" name="userName" placeholder="Username" v-model="userName"/>
+        <div class="col-md-3"/>
+      </div>
+      <div class="row">
+        <div class="col-md-3"/>
+        <input class="form-control col-md-6 mb-2 mr-sm-2" type="password" id="password" name="password" placeholder="Password" v-model="password"/>
+        <div class="col-md-3"/>
+      </div>
+      <div class="row">
+        <div class="col-md-3"/>
+        <button class="btn btn-primary mb-2 col-md-6" type="submit" name="submitBtn" value="submit">Login</button>
+        <div class="col-md-3"/>
+      </div>
+      <div class="row">
+        <div class="col-md-3"/>
+        <button class="btn btn-primary mb-2 col-md-6" type="submit" name="signUpBtn" value="signup">Sign Up</button>
+        <div class="col-md-3"/>
       </div>
     </form>
+    <div class="col-md-4"/>
   </div>
-  <div class="row">
-      <div class="col-md-4"/>
-      <button class="btn btn-primary mb-2 col-md-4" type="submit" name="signUpBtn" value="signup">Sign Up</button>
-      <div class="col-md-4"/>
-    </div>
+  
 </div>
 </template>
 
@@ -37,7 +47,8 @@ export default {
     return {
       test: 'test',
       userName: '',
-      password: ''
+      password: '',
+      errors: false
     }
   },
   methods: {
@@ -54,6 +65,7 @@ export default {
         this.$router.push('/home');
       } else {
         //add error message
+        this.errors = true;
       }
     }
   }

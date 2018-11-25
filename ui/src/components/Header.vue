@@ -1,6 +1,6 @@
 <template>
   <div class="ignore">
-    <ul class="nav justify-content-center">
+    <ul class="nav justify-content-center ">
       <li v-for="naveItem in naveItems" class="nav-link" :key="naveItem.key">
         <a :href="naveItem.link">{{naveItem.title}}</a>
       </li>

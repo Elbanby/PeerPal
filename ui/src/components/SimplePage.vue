@@ -3,8 +3,9 @@
     <nav-header :naveItems="menuItems" />
     <slot name="page-content">
       <div class="jumbotron jumbotron-fluid">
-        <h1 class="text-center">Testing Jumbotron</h1>
+        <h1 class="display-3 text-center">Greetings {{userName}}!</h1>
       </div>
+      <h4 class="text-center">Your Account Information:</h4>
     </slot>
     <page-footer/>
   </div>

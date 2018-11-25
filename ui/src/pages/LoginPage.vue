@@ -37,21 +37,24 @@ export default {
     return {
       test: 'test',
       userName: '',
-      password: '',
-      message: '',
-      socket : io('http://localhost:3000/')
+      password: ''
     }
   },
   methods: {
     onSubmit() {
       let userName = this.userName;
       let password = this.password;
-      this.userName = '';
-      this.password = '';
-      this.socket.emit('SEND_MESSAGE', {
-        user: userName,
-        message: `User ${userName} has just joined!`
-      });
+
+      if (userName && password) {
+        let token = ((Math.random(10000) + 1) + 'user' + userName).split('.');
+        localStorage.setItem('userName',userName);
+        localStorage.setItem('token', (token[0] + token[1]));
+        this.userName = '';
+        this.password = '';
+        this.$router.push('/home');
+      } else {
+        //add error message
+      }
     }
   }
 }

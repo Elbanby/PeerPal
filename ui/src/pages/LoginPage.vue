@@ -4,7 +4,7 @@
     <h1 class="display-3 text-center">PeerPal Login</h1>
     <p class="lead text-center">Welcome to PeerPal! Please login below</p>
   </div>
-  <div class="row text-center">
+  <div class="row text-center" v-if="errors">
     <div class="col-md-4"/>
     <div class="text-danger col-md-4">Testing Error Log</div>
     <div class="col-md-4"/>
@@ -47,7 +47,8 @@ export default {
     return {
       test: 'test',
       userName: '',
-      password: ''
+      password: '',
+      errors: false
     }
   },
   methods: {
@@ -64,6 +65,7 @@ export default {
         this.$router.push('/home');
       } else {
         //add error message
+        this.errors = true;
       }
     }
   }

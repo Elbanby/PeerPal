@@ -13,7 +13,8 @@ const server = app.listen(3000, function() {
 const io = require('socket.io')(server);
 
 io.on('connection', function(socket) {
-  socket.on('SEND_MESSAGE',(msg) =>{
-    console.log(msg);
+  socket.on('SEND_MESSAGE',(data) =>{
+    console.log(data);
+    io.emit('MESSAGE', data);
   });
 });

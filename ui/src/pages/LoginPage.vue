@@ -13,13 +13,16 @@
 </template>
 
 <script>
+import io from 'socket.io-client';
 export default {
   name: 'login-page',
   data() {
     return {
       test: 'test',
       userName: '',
-      password: ''
+      password: '',
+      message: '',
+      socket : io('http://localhost:3000/')
     }
   },
   methods: {
@@ -28,6 +31,10 @@ export default {
       let password = this.password;
       this.userName = '';
       this.password = '';
+      this.socket.emit('SEND_MESSAGE', {
+        user: userName,
+        message: `User ${userName} has just joined!`
+      });
     }
   }
 }

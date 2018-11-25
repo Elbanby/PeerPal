@@ -50,22 +50,17 @@ export default {
     }
   },
   components: {SimplePage},
-  computed: {
-    send() {
-      this.socket.emit('SEND_MESSAGE', {
-        user: 'omar',
-        message: 'I am trying to connect for fuck sake!'
-      });
-      this.message = '';
-      return null;
-    }
-  },
   mounted() {
-    /*this.socket.on('MESSAGE', (data) => {
-      this.messages = [...this.messages, data];
-      console.log('Message' ,this.messages);
-      // you can also do this.messages.push(data)
-    });*/
+    this.socket.emit('SEND_MESSAGE', {
+      user: localStorage.getItem('userName'),
+      message: 'I am trying to connect for fuck sake!'
+    });
+    this.message = '';
+
+    this.socket.on('MESSAGE',(data)=>{
+      console.log('Data ');
+      console.log(data);
+    });
   }
 }
 </script>

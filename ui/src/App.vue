@@ -1,9 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <!-- <div v-if="renderStrap">
-
-    </div> -->
   </div>
 </template>
 
@@ -19,8 +16,7 @@ export default {
   name: 'app',
   data() {
     return {
-      appName: 'PeerPal',
-      //renderStrap: false
+      appName: 'PeerPal'
     }
   }
 }

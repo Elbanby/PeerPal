@@ -2,7 +2,7 @@
   <div>
     <simple-page>
       <div slot="page-content">
-        <nav class="navbar navbar-inverse">
+        <!-- <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,12 +22,12 @@
               </ul>
             </div>
           </div>
-        </nav>
-        <div class="container">
+        </nav> -->
+        <!-- <div class="container">
           <div class="row">
             
           </div>
-        </div>
+        </div> -->
       </div>
     </simple-page>
   </div>
@@ -39,7 +39,7 @@ import io from 'socket.io-client';
 
 export default {
   name: 'home-page',
-  data() {
+  data() { 
     return {
       message: '',
       socket : io('http://localhost:3000/')
@@ -56,7 +56,7 @@ export default {
       return null;
     }
   },
-  mounted() {
+  mounted() { 
     /*this.socket.on('MESSAGE', (data) => {
       this.messages = [...this.messages, data];
       console.log('Message' ,this.messages);

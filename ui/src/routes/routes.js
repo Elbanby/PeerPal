@@ -8,7 +8,7 @@ export default [
   {path: '/', component: loginPage},
   {path: '/login', component: loginPage},
   {path: '/home', component: landingPage},
-  {path: '/transaction-request', component: transactionRequestPage},
-  {path: '/about-us', component: aboutUsPage},
-  {path: '/sign-up', component: signUpPage}
+  {path: '/transactionrequest', component: transactionRequestPage},
+  {path: '/aboutus', component: aboutUsPage},
+  {path: '/signup', component: signUpPage}
 ]

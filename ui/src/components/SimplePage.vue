@@ -1,12 +1,7 @@
 <template>
   <div>
     <nav-header :naveItems="menuItems" />
-    <slot name="page-content">
-      <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-3 text-center">Greetings!</h1>
-      </div>
-      <h4 class="text-center">Your Account Information:</h4>
-    </slot>
+    <slot name="page-content"></slot>
     <page-footer/>
   </div>
 </template>
@@ -21,7 +16,8 @@ export default {
     return {
       menuItems: [
         {title: 'PeerPal', link: '/', key:'peerpal'},
-        {title:'About us', link: '#aboutus', key:'aboutus'},
+        {title: 'Transaction Request', link: '/transaction-request', key: 'transactionrequest'},
+        {title:'About us', link: '/about-us', key:'aboutus'},
         {title: 'How it works', link: '#howitworks', key:'howitworks'},
         {title: 'Customer service', link: '#customerservice', key:'customerservice'}
       ]
